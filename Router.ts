@@ -1,23 +1,23 @@
 import { Elysia, t } from "elysia";
-import { MovieController } from "./controllers/MovieController";
+import { ProductController } from "./controllers/ProductController";
 
 export class Router {
-    static movies = new Elysia()
+    static products = new Elysia()
         .post(
             "/",
-            ({ body }) => MovieController.create(body),
+            ({ body }) => ProductController.create(body),
             {
                 body: t.Object({
-                    title: t.String(),
-                    director: t.String(),
-                    year: t.Number(),
-                    rating: t.Number()
+                    name: t.String(),
+                    price: t.Number(),
+                    description: t.Optional(t.String()),
+                    category: t.String()
                 })
             }
         )
         .get(
-            "/:id",
-            ({ params: { id } }) => MovieController.getById(Number(id)),
+            ":id",
+            ({ params: { id } }) => ProductController.getById(Number(id)),
             {
                 params: t.Object({
                     id: t.String()
@@ -26,11 +26,11 @@ export class Router {
         )
         .get(
             "/",
-            () => MovieController.getAll()
+            () => ProductController.getAll()
         )
         .delete(
             "/:id",
-            ({ params: { id } }) => MovieController.delete(Number(id)),
+            ({ params: { id } }) => ProductController.delete(Number(id)),
             {
                 params: t.Object({
                     id: t.String()

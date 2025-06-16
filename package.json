@@ -7,17 +7,26 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
+    "@prisma/client": "^6.8.2",
     "@types/node": "^22.15.27",
+    "prisma": "^6.8.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.3.3",
     "@elysiajs/node": "^1.3.0",
-    "@prisma/client": "^6.8.2",
     "dotenv": "^16.5.0",
-    "elysia": "^1.3.3",
-    "prisma": "^6.8.2"
-  }
+    "elysia": "^1.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SluKKi/kt3-node.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SluKKi/kt3-node/issues"
+  },
+  "homepage": "https://github.com/SluKKi/kt3-node#readme",
+  "description": ""
 }

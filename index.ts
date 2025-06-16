@@ -17,7 +17,7 @@ class API {
         this.app.use(cors());
     }
     private useRoutes() {
-        this.app.group("/api/movies", (app) => app.use(Router.movies));
+        this.app.group("/api/products", (app) => app.use(Router.products));
     }
 
     async init() {

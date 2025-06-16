@@ -7,12 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Movie {
+model Product {
   id          Int      @id @default(autoincrement())
-  title       String
-  director    String
-  year        Int
-  rating      Float
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  name        String
+  price       Float
+  description String?
+  category    String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
